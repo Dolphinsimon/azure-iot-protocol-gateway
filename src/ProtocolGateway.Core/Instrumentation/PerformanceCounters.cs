@@ -1,9 +1,9 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
+// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 namespace Microsoft.Azure.Devices.ProtocolGateway.Instrumentation
 {
-#if !NETSTANDARD1_3
+#if !NETSTANDARD2_0
     using System.Diagnostics;
     using System.Collections.Generic;
 #endif
@@ -68,7 +68,7 @@ namespace Microsoft.Azure.Devices.ProtocolGateway.Instrumentation
 
         private static IPerformanceCounterManager GetPerformanceCounterManager()
         {
-#if NETSTANDARD1_3
+#if NETSTANDARD2_0
             return new EmptyPerformanceCounterManager();
 #else
             return new Manager();
@@ -76,7 +76,7 @@ namespace Microsoft.Azure.Devices.ProtocolGateway.Instrumentation
 
         }
 
-#if !NETSTANDARD1_3
+#if !NETSTANDARD2_0
         class Manager : WindowsPerformanceCounterManager
         {
             public Manager() : base(new Dictionary<PerformanceCounterCategoryInfo, CounterCreationData[]>
