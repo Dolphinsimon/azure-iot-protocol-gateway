@@ -95,9 +95,6 @@
     <Compile Include="TopicHandling.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ProtocolGateway.Core\ProtocolGateway.Core.csproj">
       <Project>{ed3d19e8-e6a4-41f2-a667-5e543c3bcee2}</Project>
       <Name>ProtocolGateway.Core</Name>

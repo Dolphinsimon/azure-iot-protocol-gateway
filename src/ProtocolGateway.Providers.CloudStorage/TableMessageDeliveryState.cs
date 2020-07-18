@@ -4,8 +4,8 @@
 namespace Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage
 {
     using System;
+    using Microsoft.Azure.Cosmos.Table;
     using Microsoft.Azure.Devices.ProtocolGateway.Mqtt.Persistence;
-    using Microsoft.WindowsAzure.Storage.Table;
 
     class TableMessageDeliveryState : TableEntity, IQos2MessageDeliveryState
     {

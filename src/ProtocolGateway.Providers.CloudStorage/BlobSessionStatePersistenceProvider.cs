@@ -9,9 +9,9 @@ namespace Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage
     using System.Threading.Tasks;
     using Microsoft.Azure.Devices.ProtocolGateway.Identity;
     using Microsoft.Azure.Devices.ProtocolGateway.Mqtt.Persistence;
+    using Microsoft.Azure.Storage;
+    using Microsoft.Azure.Storage.Blob;
     using Microsoft.IO;
-    using Microsoft.WindowsAzure.Storage;
-    using Microsoft.WindowsAzure.Storage.Blob;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 

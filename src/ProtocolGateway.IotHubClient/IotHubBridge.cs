@@ -78,10 +78,10 @@ namespace Microsoft.Azure.Devices.ProtocolGateway.IotHubClient
                     MaxPoolSize = unchecked((uint)connectionPoolSize),
                     Pooling = connectionPoolSize > 0
                 };
-                if (connectionIdleTimeout.HasValue)
-                {
-                    amqpConnectionPoolSettings.ConnectionIdleTimeout = connectionIdleTimeout.Value;
-                }
+                //if (connectionIdleTimeout.HasValue)
+                //{
+                //    amqpConnectionPoolSettings.ConnectionIdleTimeout = connectionIdleTimeout.Value;
+                //}
                 tcpSettings.AmqpConnectionPoolSettings = amqpConnectionPoolSettings;
                 webSocketSettings.AmqpConnectionPoolSettings = amqpConnectionPoolSettings;
             }

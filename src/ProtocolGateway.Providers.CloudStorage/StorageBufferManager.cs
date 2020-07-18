@@ -1,9 +1,9 @@
-﻿namespace Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage
+namespace Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage
 {
     using System;
     using System.Collections.Concurrent;
     using System.Threading;
-    using Microsoft.WindowsAzure.Storage;
+    using Microsoft.Azure.Storage;
 
     /// <summary>
     /// Simple buffer manager intended for use with Azure Storage SDK and compression code.

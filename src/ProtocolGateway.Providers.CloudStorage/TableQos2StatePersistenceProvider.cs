@@ -11,10 +11,9 @@ namespace Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
+    using Microsoft.Azure.Cosmos.Table;
     using Microsoft.Azure.Devices.ProtocolGateway.Identity;
     using Microsoft.Azure.Devices.ProtocolGateway.Mqtt.Persistence;
-    using Microsoft.WindowsAzure.Storage;
-    using Microsoft.WindowsAzure.Storage.Table;
     using Murmur;
 
     public class TableQos2StatePersistenceProvider : IQos2StatePersistenceProvider
@@ -37,7 +36,8 @@ namespace Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage
             }
 
             CloudTableClient tableClient = cloudStorageAccount.CreateCloudTableClient();
-            tableClient.BufferManager = StorageBufferManager.Shared;
+            //TODO:The BufferManager
+            //tableClient.BufferManager = StorageBufferManager.Shared;
             this.table = tableClient.GetTableReference(tableName);
         }
 
